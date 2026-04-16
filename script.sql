@@ -22,7 +22,14 @@ CREATE TABLE users (
 
 INSERT INTO users (firstname, lastname ,email ,pasword ,role_id)
 VALUES
-('Khaoula' , 'Admin' ,'khawla@gmail' ,'123456' ,1),
-('hamza' , 'Admin' ,'hamza@gmail' ,'456789' ,2),
-('bilal' , 'Admin' ,'bilal@gmail' ,'135790' ,3),
-('sara' , 'Admin' ,'sara@gmail' ,'325498' ,1);
+('Khaoula' , 'Admin' ,'khawla1@gmail' ,'123456' ,1),
+('hamza' , 'Prof' ,'hamza2@gmail' ,'456789' ,2),
+('bilal' , 'Prof' ,'bilal3@gmail' ,'135790' ,3),
+('sara' , 'Student' ,'sara1@gmail' ,'325498' ,1);
+
+
+CREATE TABLE classes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR (100) NOT NULL,
+    classroom_number VARCHAR(20)
+);
