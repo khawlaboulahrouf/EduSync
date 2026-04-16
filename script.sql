@@ -53,3 +53,13 @@ INSERT INTO courses ( title ,description ,total_hours ,user_id)
 VALUES
 ('html & css' , 'introduction au web' , 30 ,2),
 ('javascript' , 'programmation web' , 40 ,2);
+
+CREATE table students (
+    id INT AUTO_INCREMENT PRIMARY key,
+    dateOfBirth DATE,
+    student_number VARCHAR(50) UNIQUE,
+    user_id INT UNIQUE,
+    class_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (class_id) REFERENCES classes(id)
+);
