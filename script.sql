@@ -48,3 +48,8 @@ CREATE TABLE courses (
      user_id INT,
      FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+INSERT INTO courses ( title ,description ,total_hours ,user_id)
+VALUES
+('html & css' , 'introduction au web' , 30 ,2),
+('javascript' , 'programmation web' , 40 ,2);
