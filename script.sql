@@ -63,3 +63,7 @@ CREATE table students (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (class_id) REFERENCES classes(id)
 );
+
+INSERT INTO students(dateOfBirth, student_number , user_id , class_id)
+VALUES
+('2000-05-10' , 'STU001' , 3 , 1);
