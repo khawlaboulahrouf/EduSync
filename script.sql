@@ -55,7 +55,7 @@ VALUES
 ('javascript' , 'programmation web' , 40 ,2);
 
 CREATE table students (
-    id INT AUTO_INCREMENT PRIMARY key,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     dateOfBirth DATE,
     student_number VARCHAR(50) UNIQUE,
     user_id INT UNIQUE,
@@ -80,3 +80,8 @@ CREATE TABLE enrollments (
 
     UNIQUE (student_id, course_id)
 );
+
+INSERT INTO enrollments (enrolled_at , status , student_id , course_id)
+VALUES 
+('2026-04-01' , 'actif' , 1 , 1),
+('2026-04-02' , 'actif' , 1 , 2);
