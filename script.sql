@@ -39,3 +39,12 @@ INSERT INTO classes (name , classroom_number)
 VALUES 
 ('Développeur web 2026' , 'a1'),
 ('Développeur web 2025' , 'b2');
+
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR (100) not null,
+    description TEXT,
+    total_hours INT,
+     user_id INT,
+     FOREIGN KEY (user_id) REFERENCES users(id)
+);
