@@ -22,10 +22,10 @@ CREATE TABLE users (
 
 INSERT INTO users (firstname, lastname ,email ,pasword ,role_id)
 VALUES
-('Khaoula' , 'Admin' ,'khawla1@gmail' ,'123456' ,1),
-('hamza' , 'Prof' ,'hamza2@gmail' ,'456789' ,2),
-('bilal' , 'Prof' ,'bilal3@gmail' ,'135790' ,3),
-('sara' , 'Student' ,'sara1@gmail' ,'325498' ,1);
+('Khaoula' , 'Admin' ,'khawla1@gmail.com' ,'123456' ,1),
+('hamza' , 'Prof' ,'hamza2@gmail.com' ,'456789' ,2),
+('bilal' , 'student' ,'bilal3@gmail.com' ,'135790' ,3),
+('sara' , 'Student' ,'sara1@gmail.com' ,'325498' ,1);
 
 
 CREATE TABLE classes (
@@ -67,3 +67,16 @@ CREATE table students (
 INSERT INTO students(dateOfBirth, student_number , user_id , class_id)
 VALUES
 ('2000-05-10' , 'STU001' , 3 , 1);
+
+CREATE TABLE enrollments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    enrolled_at DATE,
+    status VARCHAR(20),
+    student_id INT,
+    course_id INT,
+
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (course_id) REFERENCES courses(id),
+
+    UNIQUE (student_id, course_id)
+);
