@@ -19,3 +19,10 @@ CREATE TABLE users (
     role_id INT,
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
+
+INSERT INTO users (firstname, lastname ,email ,pasword ,role_id)
+VALUES
+('Khaoula' , 'Admin' ,'khawla@gmail' ,'123456' ,1),
+('hamza' , 'Admin' ,'hamza@gmail' ,'456789' ,2),
+('bilal' , 'Admin' ,'bilal@gmail' ,'135790' ,3),
+('sara' , 'Admin' ,'sara@gmail' ,'325498' ,1);
