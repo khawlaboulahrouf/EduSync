@@ -33,3 +33,9 @@ CREATE TABLE classes (
     name VARCHAR (100) NOT NULL,
     classroom_number VARCHAR(20)
 );
+
+
+INSERT INTO classes (name , classroom_number)
+VALUES 
+('Développeur web 2026' , 'a1'),
+('Développeur web 2025' , 'b2');
